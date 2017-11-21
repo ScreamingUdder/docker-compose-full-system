@@ -8,9 +8,10 @@ Included:
 - Kafka-Manager (https://github.com/yahoo/kafka-manager)
 - Kafka broker (https://hub.docker.com/r/wurstmeister/kafka/)
 - Zookeeper (https://hub.docker.com/_/zookeeper/)
+- EPICS IOC for a simulated ESS chopper (uses LeWIS https://github.com/DMSC-Instrument-Data/lewis)
 
 Currently missing:
-- EPICS IOC for a simulated device (will use https://github.com/DMSC-Instrument-Data/lewis)
+- Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
 - EPICS to Kafka forwarder (https://github.com/ess-dmsc/forward-epics-to-kafka)
 - NeXus file writer (https://github.com/ess-dmsc/kafka-to-nexus)
 - Make custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)

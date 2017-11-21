@@ -12,6 +12,7 @@ services:
     depends_on:
       - zookeeper
     hostname: kafka
+    restart: unless-stopped
     ports:
       - "9092:9092"
     environment:
@@ -37,3 +38,12 @@ services:
       - "9000:9000"
     environment:
       ZK_HOSTS: zookeeper:2181
+
+  ioc:
+    image: screamingudder/ess-chopper-sim-ioc
+    depends_on:
+      - producer
+    restart: unless-stopped
+    environment:
+      FORWARDER_CONFIG_TOPIC: "TEST_forwarderConfig"
+      FORWARDER_OUTPUT_TOPIC: "TEST_sampleEnv"
