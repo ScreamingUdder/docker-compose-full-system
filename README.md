@@ -5,7 +5,7 @@ Intended to be used for integration testing and functional testing of individual
 
 Included:
 - NeXus file producer (https://github.com/ScreamingUdder/isis_nexus_streamer_for_mantid)
-- Kafka-Manager (https://github.com/yahoo/kafka-manager)
+- Kafka-Manager (https://hub.docker.com/r/sheepkiller/kafka-manager/)
 - Kafka broker (https://hub.docker.com/r/wurstmeister/kafka/)
 - Zookeeper (https://hub.docker.com/_/zookeeper/)
 
