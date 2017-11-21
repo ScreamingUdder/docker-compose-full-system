@@ -4,8 +4,8 @@ A docker-compose script for as many of our system services as possible.
 Intended to be used for integration testing and functional testing of individual components. The Kafka broker is accessible at `localhost:9092`.
 
 Included:
-- NeXus file producer (https://github.com/ScreamingUdder/isis_nexus_streamer_for_mantid)
-- Kafka-Manager (https://github.com/yahoo/kafka-manager)
+- NeXus file producer (https://hub.docker.com/r/screamingudder/nexusproducer/)
+- Kafka-Manager (https://hub.docker.com/r/sheepkiller/kafka-manager/)
 - Kafka broker (https://hub.docker.com/r/wurstmeister/kafka/)
 - Zookeeper (https://hub.docker.com/_/zookeeper/)
 - EPICS IOC for a simulated ESS chopper (uses LeWIS https://github.com/DMSC-Instrument-Data/lewis)
