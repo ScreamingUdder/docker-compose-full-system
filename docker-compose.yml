@@ -1,11 +1,12 @@
-version: '2'
+version: '3'
 
 services:
   producer:
-    image: screamingudder/nexusproducer:latest
+    image: screamingudder/nexusproducer
     network_mode: "host"
     depends_on:
       - kafka
+      - zookeeper
 
   kafka:
     image: wurstmeister/kafka:0.11.0.1
@@ -34,6 +35,8 @@ services:
     image: sheepkiller/kafka-manager:alpine
     depends_on:
       - producer
+      - zookeeper
+      - kafka
     ports:
       - "9000:9000"
     environment:
@@ -41,9 +44,27 @@ services:
 
   ioc:
     image: screamingudder/ess-chopper-sim-ioc
+    network_mode: "host"
     depends_on:
       - producer
+      - zookeeper
+      - kafka
     restart: unless-stopped
     environment:
       FORWARDER_CONFIG_TOPIC: "TEST_forwarderConfig"
       FORWARDER_OUTPUT_TOPIC: "TEST_sampleEnv"
+
+  event-processor:
+    image: screamingudder/event-sum-stream-processor:1.0
+    network_mode: "host"
+    depends_on:
+      - producer
+      - kafka
+      - zookeeper
+    environment:
+      KAFKA_BROKER: "localhost:9092"
+      ZOOKEEPER_NODE: "localhost:2181"
+      INPUT_TOPIC: "TEST_events"
+      OUTPUT_EVENT_SUM_TOPIC: "TEST_eventSum"
+      OUTPUT_EVENT_SUM_ACCUMULATED_TOPIC: "TEST_eventSumAccumulated"
+      OUTPUT_ACCUMULATED_IMAGES: "True"
