@@ -9,6 +9,7 @@ Included:
 - Kafka broker (https://hub.docker.com/r/wurstmeister/kafka/)
 - Zookeeper (https://hub.docker.com/_/zookeeper/)
 - EPICS IOC for a simulated ESS chopper (uses LeWIS https://github.com/DMSC-Instrument-Data/lewis)
+- Event sum stream processor (https://hub.docker.com/r/screamingudder/event-sum-stream-processor/)
 
 Currently missing:
 - Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
