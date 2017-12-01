@@ -68,3 +68,10 @@ services:
       OUTPUT_EVENT_SUM_TOPIC: "TEST_eventSum"
       OUTPUT_EVENT_SUM_ACCUMULATED_TOPIC: "TEST_eventSumAccumulated"
       OUTPUT_ACCUMULATED_IMAGES: "True"
+
+  # Default logging is user: admin, pass:admin
+  graylog:
+    image: swcc/docker-graylog2
+    ports:
+      - "9001:9000"
+      - "12201:12201"
