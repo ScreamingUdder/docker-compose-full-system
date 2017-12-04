@@ -14,10 +14,12 @@ Included:
 - NeXus file writer (https://github.com/ess-dmsc/kafka-to-nexus)
 
 Currently missing:
-- Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
 - EPICS to Kafka forwarder (https://github.com/ess-dmsc/forward-epics-to-kafka)
-- Make custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)
+- Custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)
 - Graphite storage for metrics
 - Grafana dashboard to monitor Kafka
-- Mantid? (https://github.com/mantidproject/mantid)
-- NICOS?
+
+Possible other additions:
+- Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
+- Mantid (https://github.com/mantidproject/mantid)
+- NICOS
