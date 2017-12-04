@@ -75,3 +75,15 @@ services:
     ports:
       - "9001:9000"
       - "12201:12201"
+
+  file-writer:
+    image: screamingudder/kafka-to-nexus
+    depends_on:
+      - graylog
+      - kafka
+    network_mode: "host"
+    environment:
+      COMMAND_URI: "//localhost:9092/TEST_writerCommand"
+      STATUS_URI: "//localhost:9092/TEST_writerStatus"
+      KAFKA_BROKER: "localhost"
+      GRAYLOG_ADDRESS: "localhost:12201"
