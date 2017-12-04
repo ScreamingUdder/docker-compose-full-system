@@ -10,13 +10,14 @@ Included:
 - Zookeeper (https://hub.docker.com/_/zookeeper/)
 - EPICS IOC for a simulated ESS chopper (uses LeWIS https://github.com/DMSC-Instrument-Data/lewis)
 - Event sum stream processor (https://hub.docker.com/r/screamingudder/event-sum-stream-processor/)
+- Graylog server (https://hub.docker.com/swcc/docker-graylog2)
+- NeXus file writer (https://github.com/ess-dmsc/kafka-to-nexus)
 
 Currently missing:
 - Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
 - EPICS to Kafka forwarder (https://github.com/ess-dmsc/forward-epics-to-kafka)
-- NeXus file writer (https://github.com/ess-dmsc/kafka-to-nexus)
 - Make custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)
 - Graphite storage for metrics
 - Grafana dashboard to monitor Kafka
-- Mantid (https://github.com/mantidproject/mantid)
+- Mantid? (https://github.com/mantidproject/mantid)
 - NICOS?
