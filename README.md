@@ -15,9 +15,10 @@ Included:
 
 Currently missing:
 - EPICS to Kafka forwarder (https://github.com/ess-dmsc/forward-epics-to-kafka)
-- Custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)
-- Graphite storage for metrics
-- Grafana dashboard to monitor Kafka
+- Monitoring:
+  - Custom Kafka broker image with graphite reporter (https://github.com/damienclaveau/kafka-graphite)
+  - Graphite storage for metrics
+  - Grafana dashboard to monitor Kafka
 
 Possible other additions:
 - Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
