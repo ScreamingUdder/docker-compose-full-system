@@ -24,3 +24,4 @@ Possible other additions:
 - Other EPICS IOCs (https://github.com/ScreamingUdder/simulated-iocs-docker)
 - Mantid (https://github.com/mantidproject/mantid)
 - NICOS
+- Event Formation Unit (https://github.com/ess-dmsc/event-formation-unit)
